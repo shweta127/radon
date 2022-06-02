@@ -3,15 +3,15 @@ const trim=function(){
     console.log(nameTrim.trim())
 }
 
-const lowercase=function(){
-    let nameLowerCase="SHWETA"
-    console.log("ToLowerCase: "+ nameLowerCase.toLowerCase())
+const lowerCase1=function(){
+    let nameLowerCase1="SHWETA"
+    console.log("ToLowerCase: "+ nameLowerCase1.toLowerCase())
 }
-const upperCase=function(){
+const upperCase1=function(){
     let nameUpperCase="shweta"
-    console.log("ToUpperCase: "+nameUpperCase.toUpperCase())
+    console.log("ToUpperCase: "+ nameUpperCase.toUpperCase())
 }
 
 module.exports.trim = trim
-module.exports.lowercase=lowercase
-module.experts.uppercase=uppercase
+module.exports.lowerCase1 = lowerCase1
+module.exports.upperCase1 = upperCase1

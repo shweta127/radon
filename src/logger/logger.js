@@ -1,5 +1,6 @@
-const log = function welcome(){
+const w = function() {
     console.log("Welcome to my application.I am Shweta and a part offunctionUp Radon cohort")
 }
 
-module.experts.log=log
+
+module.exports.w = w
