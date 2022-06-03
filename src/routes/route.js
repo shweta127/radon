@@ -5,29 +5,47 @@ const { Router } = require('express');
 
 const router = express.Router();
 
-router.get("/solution1", function (req, res) {
-    var a = [1,2,3,5,6,7], count = a[a.length - 1];
-    var missing = [];
-    for ( var i = 1; i <= count; i++ ) {
-        if (a.indexOf(i) == -1) {
-            missing.push(i);
-        }
-    }
-    console.log(missing.toString());
-    res.send('done')
+
+//4
+router.get("/sol4", function(req,res){
+    let a= [ {
+        id: 1, name: "The Shining"}, 
+        { id: 2,name: "Incendies"}, 
+        { id: 3, name: "Rang de Basanti"}, 
+        {  id: 4,  name: "Finding Nemo"}];
+
+        res.send(a)
     })
-    //2
-router.get("/solution2", function (req, res) {
-    var a = [33, 34, 35, 37, 38], count = a[a.length - 1];
-    var missing = [];
-    for ( var i = 33; i <= count; i++ ) {
-        if (a.indexOf(i) == -1) {
-            missing.push(i);
-        }
+
+
+//5
+router.get('/films/:indexNumber', function(req, res){
+    let films=[{
+        "id": 1,
+        "name": "The Shining"
+    },{
+        "id": 2,
+        "name": "Incedies"
+    },{
+        "id":3,
+        "name":"Rang de Basanti"
+    },{
+        "id":4,
+        "name":"Finding Nemo"
+    }]
+
+    let movieIndex=req.params.indexNumber;
+    let finalMovie="";
+    if(movieIndex<films.length){
+        finalMovie=films[movieIndex];
+    } else {
+        finalMovie=("the movie with index no. doesnt exist")
     }
-    console.log(missing.toString());
-    res.send('done')
-    })
+    console.log(films.length)
+    console.log('The request objects is '+ JSON.stringify(req.params))
+    console.log('Movies name is '+req.params.moviesName)
+    res.send(finalMovie)
+})
     router.get('/movies', function(req, res){
         // console.log('The request objects is '+ JSON.stringify(req.params))
         // console.log('Movies name is '+req.params.moviesName)
