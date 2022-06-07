@@ -18,6 +18,6 @@ router.get("/getBooksbyChetanBhagat", BookController.getBooksbyChetanBhagat)
 
 router.post("/authorofBook", BookController.authorofBook)
 
-
+router.post("/createBook", BookController.createBook )
 
 module.exports = router;
