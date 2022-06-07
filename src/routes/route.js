@@ -16,7 +16,7 @@ router.get("/getBookData1", UserController.getBookData1)
 router.get("/getBooksInYear",UserController.getBooksInYear)
 router.get("/getXINRBooks", UserController.getXINRBooks)
 router.get("/getRandomBooks", UserController.getRandomBooks)
-
+router.get("/getParticularBooks ", UserController.getParticularBooks )
 
 
 
