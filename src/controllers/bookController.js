@@ -23,7 +23,7 @@ let getBooksbyChetanBhagat=async(req, res)=>{
 }
 
 let authorofBook=async(req, res)=>{
-    let data=await BookModel.findOneAndUpdate({name:"Two states"},{$set:{prices:100}},{new:true})
+    let data=await BookModel.findOneAndUpdate({name:"Two states"},{$set:{prices:200}},{new:true})
     let authorData =await AuthorModel.find({author_id:data.author_id}).select("author_Name")
     let price=data.prices
     res.send({msg:authorData,price})
