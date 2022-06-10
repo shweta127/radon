@@ -21,7 +21,7 @@ const createBook= async function (req, res) {
     let book = req.body
     //=========================1=============================
     let authorId=book.author_id
-    if(!authorId)return res.send("author is is required" )
+    if(!authorId)return res.send("author id is required" )
     // ========================2=============================
     let authordata= await AuthorModel.findById(authorId)
     if(!authordata)return res.send("invalid author id")
