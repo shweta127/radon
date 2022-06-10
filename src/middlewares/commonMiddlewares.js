@@ -19,6 +19,9 @@ const mid4= function ( req, res, next) {
     console.log("Hi I am a middleware named Mid4")
     next()
 }
+const globalMW= function(req,res,next){
+    console.log(" HI I AM INSIDE MI")
+}
 
 module.exports.mid1= mid1
 module.exports.mid2= mid2
